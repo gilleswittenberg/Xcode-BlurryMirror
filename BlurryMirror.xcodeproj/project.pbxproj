@@ -352,8 +352,10 @@
 				DEVELOPMENT_TEAM = 65LE28YDNU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "To show a mirror";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To add photos to Photo Library";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To add captured images to Photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -383,8 +385,10 @@
 				DEVELOPMENT_TEAM = 65LE28YDNU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "To show a mirror";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To add photos to Photo Library";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To add captured images to Photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
