@@ -17,6 +17,7 @@ struct Icon: View {
             Image(systemName: systemName)
                 .font(.system(size: 54, weight: .medium))
                 .foregroundColor(.white)
+                .frame(width: 70, height: 70)
             if let text = label {
                 Text(text)
                     .font(.system(size: 20, weight: .bold, design: .rounded))
@@ -30,6 +31,6 @@ struct Icon: View {
 struct Icon_Previews: PreviewProvider {
     static var previews: some View {
         Icon(systemName: "sun.max", label: "13 %")
-            .previewInterfaceOrientation(.portrait)
+        Icon(systemName: "square.and.arrow.up.fill", label: "Share")
     }
 }

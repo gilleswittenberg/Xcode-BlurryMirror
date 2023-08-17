@@ -13,19 +13,16 @@ struct PhotoView: View {
     
     var body: some View {
         
-        if let cgImage = photoModel.image {
+        if let image = photoModel.image {
             
-            let uiImage = UIImage(cgImage: cgImage)
-            
-            Image(uiImage: uiImage)
+            Image(uiImage: image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .edgesIgnoringSafeArea(.all)
-                .brightness(photoModel.brightness)
             
             VStack {
                 Spacer()
-                PhotoMenu(image: uiImage, photoModel: photoModel)
+                PhotoMenu(photoModel: photoModel)
                     .padding(.bottom)
             }
         }

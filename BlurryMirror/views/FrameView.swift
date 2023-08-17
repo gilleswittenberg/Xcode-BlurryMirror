@@ -18,6 +18,7 @@ struct FrameView: View {
     
     var body: some View {
         
+        
         ZStack {
             
             if let image = model.image {
@@ -89,7 +90,7 @@ struct FrameView: View {
             LongPressGesture(minimumDuration: 1)
                 .onEnded { _ in
                     guard let image = model.image else { return }
-                    photoModel.set(image)
+                    photoModel.createImage(from: image)
                 }
         )
     }
