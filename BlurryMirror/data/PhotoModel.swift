@@ -5,13 +5,12 @@
 //  Created by Gilles Wittenberg on 16/08/2023.
 //
 
-import Foundation
 import CoreImage
 
 class PhotoModel: ObservableObject {
     
     @Published var image: CGImage?
-    var hasPhoto: Bool {
+    var hasImage: Bool {
         image != nil
     }
     @BoundedDouble var brightness = 0

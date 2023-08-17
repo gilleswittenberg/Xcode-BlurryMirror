@@ -55,7 +55,7 @@ struct FrameView: View {
                 }
             }
             
-            if photoModel.hasPhoto {
+            if photoModel.hasImage {
                 PhotoView(photoModel: photoModel)
             }
         }
