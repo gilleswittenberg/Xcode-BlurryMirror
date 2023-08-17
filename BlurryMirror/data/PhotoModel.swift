@@ -15,8 +15,8 @@ class PhotoModel: ObservableObject {
     }
     @BoundedDouble var brightness = 0
     
-    init() {}
-    init (image: UIImage) {
+    convenience init (image: UIImage) {
+        self.init()
         self.image = image
     }
     
