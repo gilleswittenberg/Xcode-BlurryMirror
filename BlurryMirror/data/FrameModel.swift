@@ -1,5 +1,5 @@
 //
-//  FrameViewModel.swift
+//  FrameModel.swift
 //  BlurryMirror
 //
 //  Created by Gilles Wittenberg on 09/08/2023.
@@ -9,10 +9,14 @@ import CoreImage
 import UIKit
 import Vision
 
-class FrameViewModel: ObservableObject {
+class FrameModel: ObservableObject {
     
     @Published var image: CGImage?
     @Published var faceDetected = false
+    
+    var hasImage: Bool {
+        image != nil
+    }
 
     init () {
         FrameManager.shared.$current
@@ -22,7 +26,9 @@ class FrameViewModel: ObservableObject {
                 return CGImage.create(from: buffer)
             }
             .map { (image: CGImage) in
-                self.detectFace(image: image)
+                DispatchQueue.global().async {
+                    self.detectFace(image: image)
+                }
                 return image
             }
             .assign(to: &$image)

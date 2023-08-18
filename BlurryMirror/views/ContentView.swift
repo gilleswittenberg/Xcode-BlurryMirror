@@ -9,19 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var opacity: Double = 0
-    
     let error = CameraManager.shared.error
     
     var body: some View {
         ZStack {
-            FrameView()
-                .opacity(opacity)
-                .onAppear(perform: {
-                    withAnimation {
-                        opacity = 1
-                    }
-                })
+            MainView()
             
             if let error = error {
                 ErrorView(error: error)

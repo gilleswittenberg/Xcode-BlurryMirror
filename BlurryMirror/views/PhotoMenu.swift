@@ -14,10 +14,10 @@ struct PhotoMenu: View {
     @State private var isSharePresented = false
     
     var body: some View {
-        if let image = photoModel.image {
+        if let image = photoModel.imageSnapshot {
             HStack {
                 Spacer()
-                Icon(systemName: "photo.fill.on.rectangle.fill", label: "Save")
+                Icon(systemName: "photo.on.rectangle", label: "Save")
                     .onTapGesture {
                         let imageSaver = ImageSaver()
                         imageSaver.successHandler = {
@@ -26,7 +26,7 @@ struct PhotoMenu: View {
                         imageSaver.writeToPhotoAlbum(image: image)
                     }
                 Spacer()
-                Icon(systemName: "square.and.arrow.up.fill", label: "Share")
+                Icon(systemName: "square.and.arrow.up", label: "Share")
                     .onTapGesture {
                         isSharePresented = true
                     }
@@ -34,7 +34,7 @@ struct PhotoMenu: View {
                         ActivityViewController(activityItems: [image])
                     }
                 Spacer()
-                Icon(systemName: "xmark.square.fill", label: "Clear")
+                Icon(systemName: "xmark.square", label: "Clear")
                     .onTapGesture {
                         photoModel.clear()
                     }

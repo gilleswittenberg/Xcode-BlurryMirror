@@ -15,7 +15,7 @@ struct Icon: View {
     var body: some View {
         VStack {
             Image(systemName: systemName)
-                .font(.system(size: 54, weight: .medium))
+                .font(.system(size: 54, weight: .light, design: .rounded))
                 .foregroundColor(.white)
                 .frame(width: 70, height: 70)
             if let text = label {
