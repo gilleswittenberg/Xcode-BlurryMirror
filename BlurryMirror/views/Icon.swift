@@ -20,7 +20,7 @@ struct Icon: View {
                 .frame(width: 62, height: 62)
             if let text = label {
                 Text(text)
-                    .font(.system(size: 18, weight: .bold, design: .rounded))
+                    .font(.system(size: 18, weight: .medium, design: .rounded))
                     .foregroundColor(.white)
             }
         }

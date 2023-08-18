@@ -10,6 +10,7 @@ import SwiftUI
 struct PhotoMenu: View {
     
     var photoModel: PhotoModel
+    @Binding var showSavedPhotoMessage: Bool
     
     @State private var isSharePresented = false
     
@@ -22,6 +23,9 @@ struct PhotoMenu: View {
                         let imageSaver = ImageSaver()
                         imageSaver.successHandler = {
                             photoModel.clear()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                showSavedPhotoMessage = true
+                            }
                         }
                         imageSaver.writeToPhotoAlbum(image: image)
                     }
@@ -45,9 +49,11 @@ struct PhotoMenu: View {
 }
 
 struct PhotoMenu_Previews: PreviewProvider {
+    
     static let photoModel = PhotoModel(image: UIImage())
+    @State static var showSavedPhotoMessage = false
     
     static var previews: some View {
-        PhotoMenu(photoModel: photoModel)
+        PhotoMenu(photoModel: photoModel, showSavedPhotoMessage: $showSavedPhotoMessage)
     }
 }

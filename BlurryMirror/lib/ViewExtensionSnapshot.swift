@@ -1,5 +1,5 @@
 //
-//  ViewExtension.swift
+//  ViewExtensionSnapshot.swift
 //  BlurryMirror
 //
 //  Created by Gilles Wittenberg on 17/08/2023.

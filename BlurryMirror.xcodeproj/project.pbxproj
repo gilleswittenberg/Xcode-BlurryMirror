@@ -23,11 +23,13 @@
 		84B3DFCA2A8D5F27007E5F4D /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DFC92A8D5F27007E5F4D /* PhotoModel.swift */; };
 		84B3DFCC2A8D616E007E5F4D /* PhotoMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DFCB2A8D616E007E5F4D /* PhotoMenu.swift */; };
 		84B3DFCE2A8D62E1007E5F4D /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DFCD2A8D62E1007E5F4D /* PhotoView.swift */; };
-		84B3DFD52A8E2793007E5F4D /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DFD42A8E2793007E5F4D /* ViewExtension.swift */; };
+		84B3DFD52A8E2793007E5F4D /* ViewExtensionSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DFD42A8E2793007E5F4D /* ViewExtensionSnapshot.swift */; };
 		84B3DFD72A8E52A3007E5F4D /* BrightnessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DFD62A8E52A3007E5F4D /* BrightnessModel.swift */; };
 		84B3DFD92A8E5641007E5F4D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DFD82A8E5641007E5F4D /* MainView.swift */; };
 		84B3DFDB2A8E59E2007E5F4D /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DFDA2A8E59E2007E5F4D /* FrameView.swift */; };
 		84B3DFDD2A8E5BC7007E5F4D /* SettingDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DFDC2A8E5BC7007E5F4D /* SettingDisplay.swift */; };
+		84B3DFDF2A8FB625007E5F4D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DFDE2A8FB625007E5F4D /* Message.swift */; };
+		84B3DFE12A8FBCA1007E5F4D /* ViewExtensionFlash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DFE02A8FBCA1007E5F4D /* ViewExtensionFlash.swift */; };
 		84FBA1212A8D4D730022383A /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBA1202A8D4D730022383A /* Icon.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,11 +51,13 @@
 		84B3DFC92A8D5F27007E5F4D /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		84B3DFCB2A8D616E007E5F4D /* PhotoMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMenu.swift; sourceTree = "<group>"; };
 		84B3DFCD2A8D62E1007E5F4D /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
-		84B3DFD42A8E2793007E5F4D /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		84B3DFD42A8E2793007E5F4D /* ViewExtensionSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensionSnapshot.swift; sourceTree = "<group>"; };
 		84B3DFD62A8E52A3007E5F4D /* BrightnessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessModel.swift; sourceTree = "<group>"; };
 		84B3DFD82A8E5641007E5F4D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		84B3DFDA2A8E59E2007E5F4D /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
 		84B3DFDC2A8E5BC7007E5F4D /* SettingDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDisplay.swift; sourceTree = "<group>"; };
+		84B3DFDE2A8FB625007E5F4D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		84B3DFE02A8FBCA1007E5F4D /* ViewExtensionFlash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensionFlash.swift; sourceTree = "<group>"; };
 		84FBA1202A8D4D730022383A /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,7 +116,8 @@
 				84AAA8FE2A8C209E0057A4E4 /* ActivityViewController.swift */,
 				84AAA8F92A8ACB040057A4E4 /* BoundedDouble.swift */,
 				84AAA8D82A83C3280057A4E4 /* CGImageExtension.swift */,
-				84B3DFD42A8E2793007E5F4D /* ViewExtension.swift */,
+				84B3DFD42A8E2793007E5F4D /* ViewExtensionSnapshot.swift */,
+				84B3DFE02A8FBCA1007E5F4D /* ViewExtensionFlash.swift */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 				84B3DFCD2A8D62E1007E5F4D /* PhotoView.swift */,
 				84B3DFCB2A8D616E007E5F4D /* PhotoMenu.swift */,
 				84AAA8DC2A8431BA0057A4E4 /* ErrorView.swift */,
+				84B3DFDE2A8FB625007E5F4D /* Message.swift */,
 				84FBA1202A8D4D730022383A /* Icon.swift */,
 			);
 			path = views;
@@ -221,9 +227,11 @@
 				842B29152A82541A00FFD1A3 /* CameraView.swift in Sources */,
 				84AAA8D92A83C3280057A4E4 /* CGImageExtension.swift in Sources */,
 				84B3DFCE2A8D62E1007E5F4D /* PhotoView.swift in Sources */,
+				84B3DFDF2A8FB625007E5F4D /* Message.swift in Sources */,
 				84AAA8FF2A8C209E0057A4E4 /* ActivityViewController.swift in Sources */,
 				84AAA8D72A83C2700057A4E4 /* FrameModel.swift in Sources */,
-				84B3DFD52A8E2793007E5F4D /* ViewExtension.swift in Sources */,
+				84B3DFE12A8FBCA1007E5F4D /* ViewExtensionFlash.swift in Sources */,
+				84B3DFD52A8E2793007E5F4D /* ViewExtensionSnapshot.swift in Sources */,
 				84B3DFDD2A8E5BC7007E5F4D /* SettingDisplay.swift in Sources */,
 				842B29092A81218600FFD1A3 /* ContentView.swift in Sources */,
 				84B3DFDB2A8E59E2007E5F4D /* FrameView.swift in Sources */,
