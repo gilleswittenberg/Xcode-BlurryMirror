@@ -15,12 +15,12 @@ struct Icon: View {
     var body: some View {
         VStack {
             Image(systemName: systemName)
-                .font(.system(size: 54, weight: .light, design: .rounded))
+                .font(.system(size: 42, weight: .light, design: .rounded))
                 .foregroundColor(.white)
-                .frame(width: 70, height: 70)
+                .frame(width: 62, height: 62)
             if let text = label {
                 Text(text)
-                    .font(.system(size: 20, weight: .bold, design: .rounded))
+                    .font(.system(size: 18, weight: .bold, design: .rounded))
                     .foregroundColor(.white)
             }
         }
@@ -31,6 +31,6 @@ struct Icon: View {
 struct Icon_Previews: PreviewProvider {
     static var previews: some View {
         Icon(systemName: "sun.max", label: "13 %")
-        Icon(systemName: "square.and.arrow.up.fill", label: "Share")
+        Icon(systemName: "square.and.arrow.up", label: "Share")
     }
 }
