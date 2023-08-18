@@ -108,6 +108,7 @@
 		84AAA8F82A8ACAEA0057A4E4 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				84AAA9002A8C26000057A4E4 /* ImageSaver.swift */,
 				84AAA8FE2A8C209E0057A4E4 /* ActivityViewController.swift */,
 				84AAA8F92A8ACB040057A4E4 /* BoundedDouble.swift */,
 				84AAA8D82A83C3280057A4E4 /* CGImageExtension.swift */,
@@ -124,7 +125,6 @@
 				84AAA8D62A83C2700057A4E4 /* FrameModel.swift */,
 				84B3DFD62A8E52A3007E5F4D /* BrightnessModel.swift */,
 				84B3DFC92A8D5F27007E5F4D /* PhotoModel.swift */,
-				84AAA9002A8C26000057A4E4 /* ImageSaver.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";

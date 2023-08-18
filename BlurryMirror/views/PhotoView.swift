@@ -33,6 +33,12 @@ struct PhotoView: View {
                     .transition(AnyTransition.opacity.animation(.easeIn(duration: 0.2)))
                 }
             }
+            .gesture(
+                TapGesture()
+                    .onEnded { _ in
+                        photoModel.clear()
+                    }
+            )
             .transition(AnyTransition.asymmetric(insertion: .identity, removal: .opacity.animation(.easeIn(duration: 0.2))))
         }
     }

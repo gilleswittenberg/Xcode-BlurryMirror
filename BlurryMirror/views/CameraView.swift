@@ -63,7 +63,7 @@ struct CameraView: View {
                 }
         )
         .gesture(
-            LongPressGesture(minimumDuration: 1)
+            TapGesture()
                 .onEnded { _ in
                     guard let image = frameModel.image else { return }
                     guard frameModel.faceDetected else { return }
