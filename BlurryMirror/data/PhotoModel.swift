@@ -15,8 +15,6 @@ class PhotoModel: ObservableObject {
     var hasImage: Bool { image != nil }
     var hasImageSnapshot: Bool { imageSnapshot != nil }
     
-    private var snapshotBrightness: Double = 0
-    
     convenience init (image: UIImage) {
         self.init()
         self.image = image
@@ -25,21 +23,21 @@ class PhotoModel: ObservableObject {
     func createImage (from cgImage: CGImage, brightness: Double = 0) {
         guard let copy = cgImage.copy() else { return }
         image = UIImage(cgImage: copy)
-        snapshotBrightness = brightness
         
         DispatchQueue.main.async {
-            self.createSnapshotImage()
+            self.createSnapshotImage(brightness)
         }
     }
     
     func clear () {
         image = nil
+        imageSnapshot = nil
     }
     
-    private func createSnapshotImage () {
+    private func createSnapshotImage (_ brightness: Double) {
         guard let image = image else { return }
         imageSnapshot = Image(uiImage: image)
-            .brightness(snapshotBrightness)
+            .brightness(brightness)
             .snapshot()
     }
 }
