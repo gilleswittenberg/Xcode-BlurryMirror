@@ -32,11 +32,17 @@ struct FrameView: View {
     }
 }
 
-/*
 struct FrameView_Previews: PreviewProvider {
     
+    static let image = CIContext()
+        .createCGImage(CIImage(color: .black), from: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 0, height: 0)))
+    
+    
     static var previews: some View {
-        FrameView(image: CGImage())
+        FrameView(image: image!)
+            .environmentObject(FrameModel())
+            .environmentObject(PhotoModel())
+            .environmentObject(BrightnessModel())
+ 
     }
 }
-*/
