@@ -10,10 +10,12 @@ import SwiftUI
 struct Message: View {
     
     var text: String
+    var size: CGFloat = 18
+    var weight = Font.Weight.medium
     
     var body: some View {
         Text(text)
-            .font(.system(size: 18, weight: .medium, design: .rounded))
+            .font(.system(size: size, weight: .medium, design: .rounded))
             .foregroundColor(.white)
             .shadow(color: Color.accentColor, radius: 8)
     }

@@ -36,11 +36,19 @@ enum CameraError {
         case .unknownAuthorization: return "Authorization unknown"
         }
     }
+    
+    var isAuthorizationError: Bool {
+        switch self {
+        case .deniedAuthorization, .restrictedAuthorization, .unknownAuthorization: return true
+        default: return false
+        }
+    }
 }
 
 class CameraManager: ObservableObject {
 
     @Published var error: CameraError?
+    @Published var hasNotDeterminedAuthorizion: Bool
     
     private var minZoomFactor: Double?
     private var maxZoomFactor: Double?
@@ -72,22 +80,28 @@ class CameraManager: ObservableObject {
                 zoomFactorValue = newValue
             }
         }
-        
     }
     
     static let shared = CameraManager()
     
-    private var status = Status.unconfigured
+    private var status = Status.unconfigured {
+        didSet {
+            hasNotDeterminedAuthorizion = AVCaptureDevice.authorizationStatus(for: .video) == .notDetermined
+        }
+    }
     private var device: AVCaptureDevice?
     private let session = AVCaptureSession()
     private let sessionQueue = DispatchQueue(label: "com.gilleswittenberg.BlurryMirror.CameraManager")
     private let videoOutput = AVCaptureVideoDataOutput()
     
     private init() {
-        configure()
+        hasNotDeterminedAuthorizion = AVCaptureDevice.authorizationStatus(for: .video) == .notDetermined
+        if hasNotDeterminedAuthorizion == false {
+            configure()
+        }
     }
 
-    private func configure() {
+    func configure() {
         checkPermissions()
         sessionQueue.async {
             self.configureCaptureSession()

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84176EE22A9164E000263048 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84176EE12A9164E000263048 /* BackgroundImageView.swift */; };
+		84176EE42A9167E400263048 /* InitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84176EE32A9167E400263048 /* InitView.swift */; };
 		842B29072A81218600FFD1A3 /* BlurryMirrorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B29062A81218600FFD1A3 /* BlurryMirrorApp.swift */; };
 		842B29092A81218600FFD1A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B29082A81218600FFD1A3 /* ContentView.swift */; };
 		842B290B2A81218700FFD1A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842B290A2A81218700FFD1A3 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84176EE12A9164E000263048 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
+		84176EE32A9167E400263048 /* InitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitView.swift; sourceTree = "<group>"; };
 		842B29032A81218600FFD1A3 /* Blurry Mirror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blurry Mirror.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		842B29062A81218600FFD1A3 /* BlurryMirrorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurryMirrorApp.swift; sourceTree = "<group>"; };
 		842B29082A81218600FFD1A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -135,15 +139,17 @@
 			isa = PBXGroup;
 			children = (
 				842B29082A81218600FFD1A3 /* ContentView.swift */,
+				84176EE32A9167E400263048 /* InitView.swift */,
+				84AAA8DC2A8431BA0057A4E4 /* ErrorView.swift */,
 				84B3DFD82A8E5641007E5F4D /* MainView.swift */,
 				842B29142A82541A00FFD1A3 /* CameraView.swift */,
 				84B3DFDA2A8E59E2007E5F4D /* FrameView.swift */,
 				84B3DFDC2A8E5BC7007E5F4D /* SettingDisplay.swift */,
 				84B3DFCD2A8D62E1007E5F4D /* PhotoView.swift */,
 				84B3DFCB2A8D616E007E5F4D /* PhotoMenu.swift */,
-				84AAA8DC2A8431BA0057A4E4 /* ErrorView.swift */,
 				84B3DFDE2A8FB625007E5F4D /* Message.swift */,
 				84FBA1202A8D4D730022383A /* Icon.swift */,
+				84176EE12A9164E000263048 /* BackgroundImageView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -218,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84176EE22A9164E000263048 /* BackgroundImageView.swift in Sources */,
 				84B3DFD72A8E52A3007E5F4D /* BrightnessModel.swift in Sources */,
 				84B3DFD92A8E5641007E5F4D /* MainView.swift in Sources */,
 				842B291B2A8260FF00FFD1A3 /* FrameManager.swift in Sources */,
@@ -232,6 +239,7 @@
 				84B3DFDD2A8E5BC7007E5F4D /* SettingDisplay.swift in Sources */,
 				842B29092A81218600FFD1A3 /* ContentView.swift in Sources */,
 				84B3DFDB2A8E59E2007E5F4D /* FrameView.swift in Sources */,
+				84176EE42A9167E400263048 /* InitView.swift in Sources */,
 				84FBA1212A8D4D730022383A /* Icon.swift in Sources */,
 				84B3DFCC2A8D616E007E5F4D /* PhotoMenu.swift in Sources */,
 				84AAA8FA2A8ACB040057A4E4 /* BoundedDouble.swift in Sources */,
@@ -367,7 +375,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BlurryMirror/Preview Content\"";
 				DEVELOPMENT_TEAM = 65LE28YDNU;
 				ENABLE_PREVIEWS = YES;
@@ -385,7 +393,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.9;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gilleswittenberg.BlurryMirror;
 				PRODUCT_NAME = "Blurry Mirror";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -400,7 +408,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BlurryMirror/Preview Content\"";
 				DEVELOPMENT_TEAM = 65LE28YDNU;
 				ENABLE_PREVIEWS = YES;
@@ -418,7 +426,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.9;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gilleswittenberg.BlurryMirror;
 				PRODUCT_NAME = "Blurry Mirror";
 				SWIFT_EMIT_LOC_STRINGS = YES;

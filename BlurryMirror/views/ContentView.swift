@@ -9,13 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let error = CameraManager.shared.error
+    @StateObject private var cameraManager = CameraManager.shared
     
     var body: some View {
+        
         ZStack {
-            MainView()
             
-            if let error = error {
+            if cameraManager.hasNotDeterminedAuthorizion {
+                InitView()
+                    .zIndex(1)
+                    .transition(.opacity)
+            } else {
+                MainView()
+            }
+            
+            if let error = cameraManager.error {
                 ErrorView(error: error)
             }
         }
