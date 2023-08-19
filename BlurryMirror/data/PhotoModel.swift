@@ -14,6 +14,9 @@ class PhotoModel: ObservableObject {
     
     var hasImage: Bool { image != nil }
     var hasImageSnapshot: Bool { imageSnapshot != nil }
+    var imageShareData: Data? {
+        imageSnapshot?.jpegData(compressionQuality: 0.8)
+    }
     
     convenience init (image: UIImage) {
         self.init()
@@ -25,7 +28,7 @@ class PhotoModel: ObservableObject {
         image = UIImage(cgImage: copy)
         
         DispatchQueue.main.async {
-            self.createSnapshotImage(brightness)
+            self.imageSnapshot = self.createSnapshotImage(brightness)
         }
     }
     
@@ -34,9 +37,9 @@ class PhotoModel: ObservableObject {
         imageSnapshot = nil
     }
     
-    private func createSnapshotImage (_ brightness: Double) {
-        guard let image = image else { return }
-        imageSnapshot = Image(uiImage: image)
+    private func createSnapshotImage (_ brightness: Double) -> UIImage? {
+        guard let image = image else { return nil }
+        return Image(uiImage: image)
             .brightness(brightness)
             .snapshot()
     }

@@ -10,25 +10,12 @@ import SwiftUI
 struct PhotoMenu: View {
     
     var photoModel: PhotoModel
-    @Binding var showSavedPhotoMessage: Bool
     
     @State private var isSharePresented = false
     
     var body: some View {
-        if let image = photoModel.imageSnapshot {
+        if let image = photoModel.imageShareData {
             HStack {
-                Spacer()
-                Icon(systemName: "photo.on.rectangle", label: "Save")
-                    .onTapGesture {
-                        let imageSaver = ImageSaver()
-                        imageSaver.successHandler = {
-                            photoModel.clear()
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                showSavedPhotoMessage = true
-                            }
-                        }
-                        imageSaver.writeToPhotoAlbum(image: image)
-                    }
                 Spacer()
                 Icon(systemName: "square.and.arrow.up", label: "Share")
                     .onTapGesture {
@@ -51,9 +38,8 @@ struct PhotoMenu: View {
 struct PhotoMenu_Previews: PreviewProvider {
     
     static let photoModel = PhotoModel(image: UIImage())
-    @State static var showSavedPhotoMessage = false
     
     static var previews: some View {
-        PhotoMenu(photoModel: photoModel, showSavedPhotoMessage: $showSavedPhotoMessage)
+        PhotoMenu(photoModel: photoModel)
     }
 }

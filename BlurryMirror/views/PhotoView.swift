@@ -12,8 +12,6 @@ struct PhotoView: View {
     @EnvironmentObject var photoModel: PhotoModel
     @EnvironmentObject var brightnessModel: BrightnessModel
     
-    @Binding var showSavedPhotoMessage: Bool
-    
     var body: some View {
         if let image = photoModel.image {
             ZStack {
@@ -28,7 +26,7 @@ struct PhotoView: View {
                 if photoModel.hasImageSnapshot {
                     VStack {
                         Spacer()
-                        PhotoMenu(photoModel: photoModel, showSavedPhotoMessage: $showSavedPhotoMessage)
+                        PhotoMenu(photoModel: photoModel)
                             .padding(.bottom)
                     }
                     .transition(AnyTransition.opacity.animation(.easeIn(duration: 0.2)))
@@ -47,10 +45,8 @@ struct PhotoView: View {
 
 struct PhotoView_Previews: PreviewProvider {
     
-    @State static var showSavedPhotoMessage = false
-    
     static var previews: some View {
-        PhotoView(showSavedPhotoMessage: $showSavedPhotoMessage)
+        PhotoView()
             .environmentObject(PhotoModel())
             .environmentObject(BrightnessModel())
     }
