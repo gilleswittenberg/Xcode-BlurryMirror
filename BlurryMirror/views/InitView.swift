@@ -18,7 +18,7 @@ struct InitView: View {
             BackgroundImageView(brightness: 0.12)
             VStack {
                 Spacer()
-                Message(text: "Grant Camera permission")
+                Message(text: "Please Grant Camera Access")
                     .padding(.bottom)
             }
         }

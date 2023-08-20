@@ -27,13 +27,13 @@ enum CameraError {
     var description: String {
         switch self {
         case .cameraUnavailable: return "Camera Unavailable"
-        case .cannotAddInput: return "Can not add input"
-        case .cannotAddOutput: return "Can not add output"
-        case .cannotCreateConnection: return "Can not create connection"
+        case .cannotAddInput: return "Can Not Add Input"
+        case .cannotAddOutput: return "Can Not Add Output"
+        case .cannotCreateConnection: return "Can Not Create Connection"
         case .createCaptureInput (let error): return error.localizedDescription
-        case .deniedAuthorization: return "Authorization denied"
-        case .restrictedAuthorization: return "Authorization restricted"
-        case .unknownAuthorization: return "Authorization unknown"
+        case .deniedAuthorization: return "Authorization Denied"
+        case .restrictedAuthorization: return "Authorization Restricted"
+        case .unknownAuthorization: return "Authorization Unknown"
         }
     }
     
