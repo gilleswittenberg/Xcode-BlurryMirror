@@ -31,8 +31,19 @@
 		84B3DFDD2A8E5BC7007E5F4D /* SettingDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DFDC2A8E5BC7007E5F4D /* SettingDisplay.swift */; };
 		84B3DFDF2A8FB625007E5F4D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DFDE2A8FB625007E5F4D /* Message.swift */; };
 		84B3DFE12A8FBCA1007E5F4D /* ViewExtensionFlash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3DFE02A8FBCA1007E5F4D /* ViewExtensionFlash.swift */; };
+		84ED279D2A9284D70070C47A /* BlurryMirrorUITestsScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED279C2A9284D70070C47A /* BlurryMirrorUITestsScreenshots.swift */; };
 		84FBA1212A8D4D730022383A /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBA1202A8D4D730022383A /* Icon.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84ED27A02A9284D70070C47A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 842B28FB2A81218500FFD1A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 842B29022A81218600FFD1A3;
+			remoteInfo = BlurryMirror;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		84176EE12A9164E000263048 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
@@ -60,11 +71,20 @@
 		84B3DFDC2A8E5BC7007E5F4D /* SettingDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDisplay.swift; sourceTree = "<group>"; };
 		84B3DFDE2A8FB625007E5F4D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		84B3DFE02A8FBCA1007E5F4D /* ViewExtensionFlash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensionFlash.swift; sourceTree = "<group>"; };
+		84ED279A2A9284D70070C47A /* BlurryMirrorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlurryMirrorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84ED279C2A9284D70070C47A /* BlurryMirrorUITestsScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurryMirrorUITestsScreenshots.swift; sourceTree = "<group>"; };
 		84FBA1202A8D4D730022383A /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		842B29002A81218600FFD1A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84ED27972A9284D70070C47A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -78,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				842B29052A81218600FFD1A3 /* BlurryMirror */,
+				84ED279B2A9284D70070C47A /* BlurryMirrorUITests */,
 				842B29042A81218600FFD1A3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				842B29032A81218600FFD1A3 /* Blurry Mirror.app */,
+				84ED279A2A9284D70070C47A /* BlurryMirrorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +157,14 @@
 			path = data;
 			sourceTree = "<group>";
 		};
+		84ED279B2A9284D70070C47A /* BlurryMirrorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				84ED279C2A9284D70070C47A /* BlurryMirrorUITestsScreenshots.swift */,
+			);
+			path = BlurryMirrorUITests;
+			sourceTree = "<group>";
+		};
 		84FBA11F2A8D4D4B0022383A /* views */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +204,24 @@
 			productReference = 842B29032A81218600FFD1A3 /* Blurry Mirror.app */;
 			productType = "com.apple.product-type.application";
 		};
+		84ED27992A9284D70070C47A /* BlurryMirrorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84ED27A42A9284D70070C47A /* Build configuration list for PBXNativeTarget "BlurryMirrorUITests" */;
+			buildPhases = (
+				84ED27962A9284D70070C47A /* Sources */,
+				84ED27972A9284D70070C47A /* Frameworks */,
+				84ED27982A9284D70070C47A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84ED27A12A9284D70070C47A /* PBXTargetDependency */,
+			);
+			name = BlurryMirrorUITests;
+			productName = BlurryMirrorUITests;
+			productReference = 84ED279A2A9284D70070C47A /* BlurryMirrorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -181,11 +229,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					842B29022A81218600FFD1A3 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					84ED27992A9284D70070C47A = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 842B29022A81218600FFD1A3;
 					};
 				};
 			};
@@ -203,6 +255,7 @@
 			projectRoot = "";
 			targets = (
 				842B29022A81218600FFD1A3 /* BlurryMirror */,
+				84ED27992A9284D70070C47A /* BlurryMirrorUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -214,6 +267,13 @@
 			files = (
 				842B290E2A81218700FFD1A3 /* Preview Assets.xcassets in Resources */,
 				842B290B2A81218700FFD1A3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84ED27982A9284D70070C47A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +310,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84ED27962A9284D70070C47A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84ED279D2A9284D70070C47A /* BlurryMirrorUITestsScreenshots.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84ED27A12A9284D70070C47A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 842B29022A81218600FFD1A3 /* BlurryMirror */;
+			targetProxy = 84ED27A02A9284D70070C47A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		842B290F2A81218700FFD1A3 /* Debug */ = {
@@ -433,6 +509,44 @@
 			};
 			name = Release;
 		};
+		84ED27A22A9284D70070C47A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 65LE28YDNU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gilleswittenberg.BlurryMirrorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BlurryMirror;
+			};
+			name = Debug;
+		};
+		84ED27A32A9284D70070C47A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 65LE28YDNU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gilleswittenberg.BlurryMirrorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BlurryMirror;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -450,6 +564,15 @@
 			buildConfigurations = (
 				842B29122A81218700FFD1A3 /* Debug */,
 				842B29132A81218700FFD1A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84ED27A42A9284D70070C47A /* Build configuration list for PBXNativeTarget "BlurryMirrorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84ED27A22A9284D70070C47A /* Debug */,
+				84ED27A32A9284D70070C47A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

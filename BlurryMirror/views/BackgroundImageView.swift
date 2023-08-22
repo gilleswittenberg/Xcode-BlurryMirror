@@ -12,15 +12,18 @@ struct BackgroundImageView: View {
     var brightness: Double = 0
     
     var body: some View {
-        Image("background")
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .edgesIgnoringSafeArea(.all)
-            .blur(
-                radius: 28,
-                opaque: true
-            )
-            .brightness(brightness)
+        GeometryReader { geometry in
+            Image("background")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .edgesIgnoringSafeArea(.all)
+                .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
+                .blur(
+                    radius: 28,
+                    opaque: true
+                )
+                .brightness(brightness)
+        }
     }
 }
 

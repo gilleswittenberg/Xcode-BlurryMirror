@@ -19,16 +19,19 @@ struct FrameView: View {
     
     var body: some View {
         let uiImage = UIImage(cgImage: image)
-        Image(uiImage: uiImage)
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .edgesIgnoringSafeArea(.all)
-            .brightness(brightnessModel.brightness)
-            .blur(
-                radius: frameModel.faceDetected ? 0 : blurRadiusMax,
-                opaque: true
-            )
-            .animation(.default, value: frameModel.faceDetected)
+        GeometryReader { geometry in
+            Image(uiImage: uiImage)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .edgesIgnoringSafeArea(.all)
+                .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
+                .brightness(brightnessModel.brightness)
+                .blur(
+                    radius: frameModel.faceDetected ? 0 : blurRadiusMax,
+                    opaque: true
+                )
+                .animation(.default, value: frameModel.faceDetected)
+        }
     }
 }
 

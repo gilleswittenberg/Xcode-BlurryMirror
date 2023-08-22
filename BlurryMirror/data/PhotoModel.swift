@@ -18,9 +18,10 @@ class PhotoModel: ObservableObject {
         imageSnapshot?.jpegData(compressionQuality: 0.8)
     }
     
-    convenience init (image: UIImage) {
+    convenience init (image: UIImage, imageSnapshot: UIImage? = nil) {
         self.init()
         self.image = image
+        self.imageSnapshot = imageSnapshot
     }
     
     func createImage (from cgImage: CGImage, brightness: Double = 0) {

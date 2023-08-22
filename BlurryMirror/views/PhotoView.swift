@@ -15,13 +15,16 @@ struct PhotoView: View {
     var body: some View {
         if let image = photoModel.image {
             ZStack {
-                Image(uiImage: image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .edgesIgnoringSafeArea(.all)
-                    .brightness(brightnessModel.brightness)
-                    .opacity(photoModel.hasImageSnapshot ? 0.9 : 1)
-                    .animation(.easeIn(duration: 4), value: photoModel.hasImageSnapshot)
+                GeometryReader { geometry in
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .edgesIgnoringSafeArea(.all)
+                        .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
+                        .brightness(brightnessModel.brightness)
+                        .opacity(photoModel.hasImageSnapshot ? 0.9 : 1)
+                        .animation(.easeIn(duration: 4), value: photoModel.hasImageSnapshot)
+                }
                 
                 if photoModel.hasImageSnapshot {
                     VStack {

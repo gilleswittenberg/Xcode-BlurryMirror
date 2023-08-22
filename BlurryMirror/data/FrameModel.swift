@@ -32,6 +32,16 @@ class FrameModel: ObservableObject {
                 return image
             }
             .assign(to: &$image)
+        
+        
+        // Uncomment (and comment out the Combine code above to create screenshots (BlurryMirrorUITestsScreenshots)
+        /*
+        guard let uiImage = UIImage(named: "") else { return }
+        guard let ciImage = CIImage(image: uiImage) else { return }
+        let context = CIContext(options: nil)
+        image = context.createCGImage(ciImage, from: ciImage.extent)
+        faceDetected = true
+        */
     }
     
     private func detectFace (image: CGImage) {
