@@ -86,7 +86,9 @@ class CameraManager: ObservableObject {
     
     private var status = Status.unconfigured {
         didSet {
-            hasNotDeterminedAuthorizion = AVCaptureDevice.authorizationStatus(for: .video) == .notDetermined
+            DispatchQueue.main.async {
+                self.hasNotDeterminedAuthorizion = AVCaptureDevice.authorizationStatus(for: .video) == .notDetermined
+            }
         }
     }
     private var device: AVCaptureDevice?
@@ -137,8 +139,10 @@ class CameraManager: ObservableObject {
     private func configureCaptureSession() {
         
         func abort (_ status: Status, _ error: CameraError) {
-            self.status = status
-            self.error = error
+            DispatchQueue.main.async {
+                self.status = status
+                self.error = error
+            }
         }
         
         guard status == .unconfigured else { return }
